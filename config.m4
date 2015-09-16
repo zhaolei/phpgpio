@@ -7,15 +7,15 @@ dnl without editing.
 
 dnl If your extension references something external, use with:
 
-dnl PHP_ARG_WITH(phpgpio, for phpgpio support,
+PHP_ARG_WITH(phpgpio, for phpgpio support,
 dnl Make sure that the comment is aligned:
-dnl [  --with-phpgpio             Include phpgpio support])
+[  --with-phpgpio             Include phpgpio support])
 
 dnl Otherwise use enable:
 
-dnl PHP_ARG_ENABLE(phpgpio, whether to enable phpgpio support,
+PHP_ARG_ENABLE(phpgpio, whether to enable phpgpio support,
 dnl Make sure that the comment is aligned:
-dnl [  --enable-phpgpio           Enable phpgpio support])
+[  --enable-phpgpio           Enable phpgpio support])
 
 if test "$PHP_PHPGPIO" != "no"; then
   dnl Write more examples of tests here...
