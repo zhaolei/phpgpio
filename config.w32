@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("phpgpio", "for phpgpio support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("phpgpio", "enable phpgpio support", "no");
+
+if (PHP_PHPGPIO != "no") {
+	EXTENSION("phpgpio", "phpgpio.c");
+}
+
