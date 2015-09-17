@@ -45,6 +45,17 @@ PHP_RSHUTDOWN_FUNCTION(phpgpio);
 PHP_MINFO_FUNCTION(phpgpio);
 
 PHP_FUNCTION(confirm_phpgpio_compiled);	/* For testing, remove later. */
+PHP_FUNCTION(wiringPiSetup);	/* For testing, remove later. */
+PHP_FUNCTION(wiringPiSetupGpio);	/* For testing, remove later. */
+PHP_FUNCTION(wiringPiSetupPhys);	/* For testing, remove later. */
+PHP_FUNCTION(wiringPiSetupSys);	/* For testing, remove later. */
+PHP_FUNCTION(pinMode);	/* For testing, remove later. */
+PHP_FUNCTION(pullUpDnControl);	/* For testing, remove later. */
+PHP_FUNCTION(digitalWrite);	/* For testing, remove later. */
+PHP_FUNCTION(pwmWrite);	/* For testing, remove later. */
+PHP_FUNCTION(digitalRead);	/* For testing, remove later. */
+PHP_FUNCTION(analogRead);	/* For testing, remove later. */
+PHP_FUNCTION(analogWrite);	/* For testing, remove later. */
 
 /* 
   	Declare any global variables you may need between the BEGIN

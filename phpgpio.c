@@ -26,6 +26,7 @@
 #include "php_ini.h"
 #include "ext/standard/info.h"
 #include "php_phpgpio.h"
+#include <wiringPi.h>
 
 /* If you declare any globals in php_phpgpio.h uncomment this:
 ZEND_DECLARE_MODULE_GLOBALS(phpgpio)
@@ -40,6 +41,17 @@ static int le_phpgpio;
  */
 const zend_function_entry phpgpio_functions[] = {
 	PHP_FE(confirm_phpgpio_compiled,	NULL)		/* For testing, remove later. */
+	PHP_FE(wiringPiSetup,	NULL)		/* For gpio_start. */
+	PHP_FE(wiringPiSetupGpio,	NULL)		/* For gpio_start. */
+	PHP_FE(wiringPiSetupPhys,	NULL)		/* For gpio_start. */
+	PHP_FE(wiringPiSetupSys,	NULL)		/* For gpio_start. */
+	PHP_FE(pinMode,	NULL)		/* For gpio_start. */
+	PHP_FE(pullUpDnControl,	NULL)		/* For gpio_start. */
+	PHP_FE(digitalWrite,	NULL)		/* For gpio_start. */
+	PHP_FE(pwmWrite,	NULL)		/* For gpio_start. */
+	PHP_FE(digitalRead,	NULL)		/* For gpio_start. */
+	PHP_FE(analogRead,	NULL)		/* For gpio_start. */
+	PHP_FE(analogWrite,	NULL)		/* For gpio_start. */
 	PHP_FE_END	/* Must be the last line in phpgpio_functions[] */
 };
 /* }}} */
@@ -170,6 +182,65 @@ PHP_FUNCTION(confirm_phpgpio_compiled)
    function definition, where the functions purpose is also documented. Please 
    follow this convention for the convenience of others editing your code.
 */
+
+ZEND_FUNCTION(wiringPiSetup)
+{
+		wiringPiSetup();
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(wiringPiSetupGpio)
+{
+		wiringPiSetupGpio();
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(wiringPiSetupPhys)
+{
+		wiringPiSetupPhys();
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(wiringPiSetupSys)
+{
+		wiringPiSetupSys();
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(pinMode)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(pullUpDnControl)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(digitalWrite)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(pwmWrite)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(digitalRead)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(analogRead)
+{
+	    php_printf("Hello World!\n");
+}
+
+ZEND_FUNCTION(analogWrite)
+{
+	    php_printf("Hello World!\n");
+}
 
 
 /*
